@@ -71,7 +71,7 @@ let Caroussel = function ([...image]) {
         divButton.appendChild(buttonRight);
 
         const image = document.createElement("img");
-        image.src = "/img/img1.jpg";
+        image.src = "img/img1.jpg";
         image.id = "noelDisney";
         image.style.width = "70vw";
         image.style.height = "60vh";
