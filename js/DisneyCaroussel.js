@@ -1,9 +1,21 @@
+/**
+ * create Objet Caroussel
+ * @param image
+ * @constructor
+ */
 let Caroussel = function ([...image]) {
     let i = 0;
     this.arrayImage = [...image];
 
+    /**
+     * Create title
+     * @param title
+     */
     this.title = function (title) {
         const h1 = document.createElement("h1");
+        /**
+         * Style
+         */
         h1.innerHTML = title;
         h1.style.textAlign = "center";
         h1.style.padding = "2rem";
@@ -14,11 +26,17 @@ let Caroussel = function ([...image]) {
         document.body.appendChild(h1);
 
     }
-
+    /**
+     * create element
+      */
     this.draw = function () {
 
         const div = document.createElement("div");
         div.id = "containerSecond";
+        /**
+         * style
+         * @type {string}
+         */
         div.style.position = "relative";
         div.style.width = "70vw";
         div.style.height = "60vh";
@@ -28,6 +46,10 @@ let Caroussel = function ([...image]) {
         document.body.appendChild(div);
 
         const divButton = document.createElement("div");
+        /**
+         * style
+         * @type {string}
+         */
         divButton.style.width = "70vw";
         divButton.style.height = "60vh";
         divButton.style.position = "absolute";
@@ -39,11 +61,13 @@ let Caroussel = function ([...image]) {
         const buttonLeft = document.createElement("button");
         buttonLeft.id = "arrowG";
         buttonLeft.innerHTML = "<";
+        buttonLeft.style.fontSize = "2rem";
         divButton.appendChild(buttonLeft);
 
         const buttonRight = document.createElement("button");
         buttonRight.id = "arrowD";
         buttonRight.innerHTML = ">";
+        buttonRight.style.fontSize = "2rem";
         divButton.appendChild(buttonRight);
 
         const image = document.createElement("img");
@@ -54,6 +78,9 @@ let Caroussel = function ([...image]) {
         document.getElementById("containerSecond").appendChild(image);
     }
 
+    /**
+     * create function nav button
+      */
    this.nav = function () {
        let buttonD = document.getElementById("arrowD");
        console.log(buttonD)
@@ -80,3 +107,4 @@ let Caroussel = function ([...image]) {
        })
    }
 }
+

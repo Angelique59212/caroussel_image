@@ -8,14 +8,5 @@ html {
     font-size: 62.5%;
 }
 
-#navButton {
-    width: 70vw;
-    height: 80vh;
-    margin: 0 auto;
-    position: absolute;
-    left: 15vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
